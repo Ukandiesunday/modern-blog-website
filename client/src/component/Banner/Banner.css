@@ -1,0 +1,14 @@
+.container {
+  margin-top: 70px;
+  padding: 50px 5%;
+  background-color: pink;
+  text-align: center;
+}
+.banner-h1 {
+  margin: 10px auto;
+  text-transform: capitalize;
+}
+.container p {
+  font-size: 18px;
+  font-weight: 500;
+}

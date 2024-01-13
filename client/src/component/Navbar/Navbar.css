@@ -1,0 +1,97 @@
+navbar {
+  position: relative;
+}
+
+.navbar-container {
+  background: purple;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.logo span {
+  color: rgb(174, 14, 14);
+}
+.logo {
+  color: white;
+}
+.nav-flex {
+  padding: 15px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 1s;
+  color: white;
+}
+.active {
+  color: #ffc0cb;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 20px;
+}
+.btn {
+  cursor: pointer;
+  border: 0;
+  height: 30px;
+  width: 30px;
+  font-size: 30px;
+  color: #ffc0cb;
+  background-color: transparent;
+}
+.mobile,
+.menu-icon {
+  display: none;
+}
+@media (max-width: 768px) {
+  .ul {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    position: relative;
+  }
+
+  .ul2 {
+    position: absolute;
+    top: -300px;
+    background-color: purple;
+    width: 200px;
+    transition: all 0.3s ease;
+    z-index: 5;
+  }
+  .ul2.mobile-menu {
+    top: 0;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .li {
+    display: block;
+    color: white;
+  }
+  .mobile-menu .li {
+    padding: 8px 20px;
+    box-shadow: 0 0 5px rgb(174, 50, 174);
+    transition: all 1s ease;
+  }
+  .links {
+    color: rgb(235, 219, 219);
+  }
+  .active {
+    color: pink;
+  }
+}
