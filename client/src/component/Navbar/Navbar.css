@@ -1,9 +1,5 @@
-navbar {
-  position: relative;
-}
-
 .navbar-container {
-  background: purple;
+  background: white;
   position: fixed;
   width: 100%;
   height: 70px;
@@ -15,9 +11,9 @@ navbar {
 .logo span {
   color: rgb(174, 14, 14);
 }
-.logo {
-  color: white;
-}
+/* .logo {
+  color: black;
+} */
 .nav-flex {
   padding: 15px 10%;
   display: flex;
@@ -30,10 +26,11 @@ navbar {
   font-size: 18px;
   font-weight: 500;
   transition: all 1s;
-  color: white;
+  color: black;
 }
 .active {
-  color: #ffc0cb;
+  /* color: #ffc0cb; */
+  color: rgb(174, 14, 14);
   font-size: 18px;
   font-weight: 500;
 }
@@ -49,7 +46,7 @@ navbar {
   height: 30px;
   width: 30px;
   font-size: 30px;
-  color: #ffc0cb;
+  color: rgb(174, 14, 14);
   background-color: transparent;
 }
 .mobile,
@@ -68,7 +65,7 @@ navbar {
   .ul2 {
     position: absolute;
     top: -300px;
-    background-color: purple;
+    background-color: white;
     width: 200px;
     transition: all 0.3s ease;
     z-index: 5;
@@ -81,17 +78,17 @@ navbar {
   }
   .li {
     display: block;
-    color: white;
   }
   .mobile-menu .li {
     padding: 8px 20px;
-    box-shadow: 0 0 5px rgb(174, 50, 174);
+    box-shadow: 0 2px 0px rgb(174, 14, 14);
+    /* box-shadow: 0 0 5px rgb(174, 50, 174); */
     transition: all 1s ease;
   }
-  .links {
+  /* .links {
     color: rgb(235, 219, 219);
-  }
+  } */
   .active {
-    color: pink;
+    color: rgb(174, 14, 14);
   }
 }
