@@ -1,0 +1,33 @@
+.category-flex {
+  background-color: rgb(119, 16, 16);
+  padding: 0 3% 10px 3%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 40px;
+}
+.category-wrapper {
+  display: flex;
+  gap: 40px;
+}
+.cat-div {
+  height: 25px;
+}
+.cat-p {
+  width: fit-content;
+  height: 100%;
+  color: white;
+  padding: 0 2px 2px 2px;
+  text-wrap: nowrap;
+  cursor: pointer;
+  border-left: 1px solid rgb(160, 105, 105);
+}
+.p {
+  border-left: none;
+}
+.cat-p:hover {
+  border-bottom: 4px solid white;
+}
+.active-category {
+  border-bottom: 4px solid white;
+}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { BiMenuAltRight } from "react-icons/bi";
 
@@ -8,7 +8,6 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navItems = [
     { path: "/", link: "home" },
-    { path: "/service", link: "service" },
     { path: "/about", link: "about" },
     { path: "/press", link: "press" },
     { path: "/contact", link: "contact" },
@@ -20,9 +19,11 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navbar-container">
         <div className="nav-flex">
-          <h1 className="logo">
-            our<span>Blog</span>
-          </h1>
+          <Link to="/">
+            <h1 className="logo">
+              our<span>Blog</span>
+            </h1>
+          </Link>
           <ul className="ul">
             {navItems.map((navItem) => (
               <li key={navItem.link}>

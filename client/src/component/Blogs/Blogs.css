@@ -4,11 +4,16 @@
   display: flex;
   flex-wrap: wrap;
 }
+.loading {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
 .blogs-left {
-  flex-basis: 73%;
+  flex-basis: 72%;
 }
 .blogs-right {
-  flex-basis: 20%;
+  flex-basis: 28%;
 }
 @media (max-width: 768px) {
   .blogs-left {

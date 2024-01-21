@@ -1,0 +1,42 @@
+.blog {
+  margin: 30px 0;
+  padding: 0px 3%;
+}
+.h2 {
+  text-transform: capitalize;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.single-blog {
+  display: flex;
+}
+
+.blog-item {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.img-wrapper {
+  flex-basis: 50%;
+}
+.image-container {
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+}
+.blog-item-wrap {
+  flex-basis: 47%;
+}
+@media (max-width: 768px) {
+  .blog-item-wrap,
+  .img-wrapper {
+    flex-basis: 100%;
+  }
+  .single-item {
+    flex-wrap: wrap;
+  }
+  .blog-item {
+    gap: 0px;
+  }
+}

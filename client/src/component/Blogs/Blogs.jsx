@@ -1,36 +1,43 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import "./Blogs.css";
-import axios from "axios";
+// import axios from "axios";
 import BlogCards from "../BlogCards/BlogCards";
+import Category from "../Category/Category";
+import Sidebar from "../Sidebar/Sidebar";
+import { useGlobalContext } from "../../context";
+import Loader from "../Loader/Loader";
 const Blogs = () => {
-  const [blogs, setBlogs] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [category, setCategory] = useState("");
-  let pageSize = 8;
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      const url = `https://modern-blog-website-sever.vercel.app/blogs?page=${currentPage}&limit=${pageSize}&category=${category}`;
-
-      const data = await axios.get(url).then((res) => res.data.blogs);
-      setBlogs(data);
-    };
-    fetchBlogs();
-  }, [currentPage, pageSize, category]);
-  console.log(blogs);
-  const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
-  const handleCategoryChange = (category) => {
-    setCategory(category);
-    setCurrentPage(1);
-  };
+  const {
+    blogs,
+    currentPage,
+    category,
+    activeCategory,
+    handlePageChange,
+    handleCategoryChange,
+    isLoading,
+    pageSize,
+  } = useGlobalContext();
+  if (isLoading) {
+    return (
+      <div>
+        <Loader />
+      </div>
+    );
+  }
   return (
-    <div>
+    <div className="blogs-container">
+      <div className="category">
+        <Category
+          selectedCategory={category}
+          handleCategoryChange={handleCategoryChange}
+          blogs={blogs}
+          activeCategory={activeCategory}
+        />
+      </div>
       <div className="blogs">
         <div className="blogs-left">
           <BlogCards
             blogs={blogs}
-            // handleCategoryChange={handleCategoryChange}
             category={category}
             pageSize={pageSize}
             currentPage={currentPage}
@@ -38,8 +45,7 @@ const Blogs = () => {
           />
         </div>
         <div className="blogs-right">
-          <h2>Explore popular and current news </h2>
-          <div className="category">{/* call category component */}</div>
+          <Sidebar blogs={blogs} />
         </div>
       </div>
     </div>

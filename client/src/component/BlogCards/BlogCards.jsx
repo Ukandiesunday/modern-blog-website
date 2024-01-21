@@ -1,6 +1,8 @@
 import "./BlogCards.css";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
+import { FaUserAstronaut } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const BlogCards = ({
   blogs,
@@ -35,16 +37,21 @@ const BlogCards = ({
       <div className="card-container">
         {filteredBlogs?.map((blog) => (
           <div key={blog.id} className="card-wrapper">
-            <div className="img-container">
-              <img src={blog?.image} alt="" />
-            </div>
-            <div className="items-wrapper">
-              <h4>{blog?.title}</h4>
-              <p>{blog?.content}</p>
-              {/* <img src={blog?.authorPic} alt="" /> */}
-              <span>{blog?.author}</span>
-              <span>{blog?.published_date}</span>
-            </div>
+            <Link to={`/blogs/${blog.id}`}>
+              <div className="img-container">
+                <img src={blog?.image} alt="" />
+              </div>
+              <div className="items-wrapper">
+                <h4>{blog?.title}</h4>
+                <p>{blog?.content}</p>
+
+                <div>
+                  <FaUserAstronaut />
+                  Author: {blog?.author}
+                </div>
+                <div>Published date: {blog?.published_date}</div>
+              </div>
+            </Link>
           </div>
         ))}
       </div>
