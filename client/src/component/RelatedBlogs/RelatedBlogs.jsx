@@ -20,7 +20,6 @@ const RelatedBlogs = ({ relatedCategory }) => {
               </div>
               <div className="items-wrapper">
                 <h4>{blog?.title}</h4>
-                <p>{blog?.content}</p>
                 <div>
                   <FaUserAstronaut />
                   Author: {blog?.author}

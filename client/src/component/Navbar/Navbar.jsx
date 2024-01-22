@@ -1,19 +1,31 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { BiMenuAltRight } from "react-icons/bi";
+import { FaPlus } from "react-icons/fa6";
+import { FaMinus } from "react-icons/fa6";
 
 import "./Navbar.css";
+import { useGlobalContext } from "../../context";
 const Navbar = () => {
+  const [isCategoryOpen, setIsCategoryOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const { category, handleCategoryChange } = useGlobalContext();
+
+  const categories = ["AI", "Health", "Security", "Startups", "Tech"];
+
   const navItems = [
-    { path: "/", link: "home" },
-    { path: "/about", link: "about" },
-    { path: "/press", link: "press" },
-    { path: "/contact", link: "contact" },
+    { path: "/", link: "Home" },
+    { path: "/about", link: "About" },
+    { path: "/contact", link: "Contact" },
   ];
   const handleMenuToggle = () => {
     setIsOpen(!isOpen);
+  };
+  const handleCategoryToggle = () => {
+    setIsCategoryOpen(!isCategoryOpen);
   };
   return (
     <div className="navbar">
@@ -54,6 +66,46 @@ const Navbar = () => {
                 </NavLink>
               </li>
             ))}
+
+            <div>
+              <p className="links li" onClick={handleCategoryToggle}>
+                See Categories
+                <span> {isCategoryOpen ? <FaMinus /> : <FaPlus />}</span>
+              </p>
+
+              <div className={isCategoryOpen ? "" : "open-cat"}>
+                <div className="li">
+                  <p
+                    className={`links ${!category ? "active-cat" : ""}`}
+                    onClick={() => {
+                      handleCategoryChange(null);
+                      handleMenuToggle();
+                      navigate("/");
+                    }}
+                  >
+                    See All
+                  </p>
+                </div>
+                {categories.map((cat, index) => {
+                  return (
+                    <li key={index} className="li">
+                      <p
+                        className={`hover links ${
+                          cat === category ? "active-cat" : ""
+                        }`}
+                        onClick={() => {
+                          handleCategoryChange(cat);
+                          handleMenuToggle();
+                          navigate("/");
+                        }}
+                      >
+                        {cat}
+                      </p>
+                    </li>
+                  );
+                })}
+              </div>
+            </div>
           </ul>
         </div>
       </div>

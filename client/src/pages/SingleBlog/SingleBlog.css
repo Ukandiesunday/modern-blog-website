@@ -5,7 +5,7 @@
 .h2 {
   text-transform: capitalize;
   font-size: 25px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .single-blog {
   display: flex;
@@ -35,8 +35,5 @@
   }
   .single-item {
     flex-wrap: wrap;
-  }
-  .blog-item {
-    gap: 0px;
   }
 }

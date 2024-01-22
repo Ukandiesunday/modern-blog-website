@@ -21,6 +21,8 @@
   text-wrap: nowrap;
   cursor: pointer;
   border-left: 1px solid rgb(160, 105, 105);
+  font-size: 18px;
+  font-weight: 500;
 }
 .p {
   border-left: none;
@@ -30,4 +32,9 @@
 }
 .active-category {
   border-bottom: 4px solid white;
+}
+@media (max-width: 768px) {
+  .category-flex {
+    display: none;
+  }
 }

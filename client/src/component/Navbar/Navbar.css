@@ -27,6 +27,7 @@
   font-weight: 500;
   transition: all 1s;
   color: black;
+  cursor: pointer;
 }
 .active {
   /* color: #ffc0cb; */
@@ -82,13 +83,20 @@
   .mobile-menu .li {
     padding: 8px 20px;
     box-shadow: 0 2px 0px rgb(174, 14, 14);
-    /* box-shadow: 0 0 5px rgb(174, 50, 174); */
     transition: all 1s ease;
   }
-  /* .links {
-    color: rgb(235, 219, 219);
-  } */
   .active {
     color: rgb(174, 14, 14);
+  }
+
+  .active-cat {
+    color: yellowgreen;
+    cursor: pointer;
+  }
+  .hover:hover {
+    cursor: pointer;
+  }
+  .open-cat {
+    display: none;
   }
 }

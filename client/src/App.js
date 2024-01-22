@@ -1,14 +1,8 @@
-import {
-  Outlet,
-  RouterProvider,
-  createBrowserRouter,
-  useParams,
-} from "react-router-dom";
+import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Navbar from "./component/Navbar/Navbar";
 import Footer from "./component/Footer/Footer";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
-import Press from "./pages/Press/Press";
 import Contact from "./pages/Contact/Contact";
 import SingleBlog from "./pages/SingleBlog/SingleBlog";
 import Banner from "./component/Banner/Banner";
@@ -40,10 +34,6 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
-      },
-      {
-        path: "/press",
-        element: <Press />,
       },
       {
         path: "/contact",
