@@ -6,6 +6,10 @@
   text-transform: capitalize;
   font-size: 25px;
   margin-bottom: 15px;
+  background: linear-gradient(90deg, rgb(94, 3, 94), red);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .single-blog {
   display: flex;

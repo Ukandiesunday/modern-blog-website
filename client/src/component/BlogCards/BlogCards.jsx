@@ -34,6 +34,7 @@ const BlogCards = ({
 
   return (
     <div className="blog-cards">
+      <h2 className="h2">get our latest news around the world</h2>
       <div className="card-container">
         {filteredBlogs?.map((blog) => (
           <div key={blog.id} className="card-wrapper">

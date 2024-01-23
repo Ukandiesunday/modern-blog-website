@@ -1,9 +1,9 @@
 .category-flex {
   background-color: rgb(119, 16, 16);
-  padding: 0 3% 10px 3%;
+  padding: 20px 3% 10px 3%;
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
   gap: 40px;
 }
 .category-wrapper {
@@ -21,8 +21,6 @@
   text-wrap: nowrap;
   cursor: pointer;
   border-left: 1px solid rgb(160, 105, 105);
-  font-size: 18px;
-  font-weight: 500;
 }
 .p {
   border-left: none;

@@ -3,7 +3,9 @@ import loaderImg from "../../images/loader.svg";
 const Loader = () => {
   return (
     <div className="loader">
-      <img src={loaderImg} alt="loader" />
+      <div className="img-loader-container">
+        <img src={loaderImg} alt="loader" />
+      </div>
     </div>
   );
 };
