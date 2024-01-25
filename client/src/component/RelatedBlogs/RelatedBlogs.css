@@ -2,3 +2,8 @@
   margin: 80px 0;
   padding: 0 3%;
 }
+@media (max-width: 768px) {
+  .related-blog {
+    padding: 0 4%;
+  }
+}

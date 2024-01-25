@@ -6,7 +6,7 @@
   text-transform: capitalize;
   font-size: 25px;
   margin-bottom: 15px;
-  background: linear-gradient(90deg, rgb(94, 3, 94), red);
+  background: linear-gradient(110deg, rgb(94, 3, 94), red);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -39,5 +39,8 @@
   }
   .single-item {
     flex-wrap: wrap;
+  }
+  .blog {
+    padding: 0px 4%;
   }
 }

@@ -33,7 +33,7 @@ const Navbar = () => {
         <div className="nav-flex">
           <Link to="/">
             <h1 className="logo">
-              our<span>Blog</span>
+              news<span>Blog</span>
             </h1>
           </Link>
           <ul className="ul">

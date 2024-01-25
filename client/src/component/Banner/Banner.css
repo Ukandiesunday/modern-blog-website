@@ -1,29 +1,34 @@
 .banner {
   margin-top: 40px;
   width: 100%;
-  height: 64vh;
+  height: 70vh;
   padding: 40px 10%;
-  background-color: rgb(119, 16, 16);
+
+  background: linear-gradient(130deg, rgb(213, 116, 213), rgb(154, 14, 14));
 }
-@media (max-width: 768px) {
-  .banner {
-    padding: 40px 2% 40px 2%;
-    height: 50vh;
-    overflow: hidden;
-  }
+.banner h3 {
+  color: white;
 }
+
 .slider-container {
   margin: 20px 0 20px;
   width: 100%;
 }
 .slider-img-container {
   width: 100px;
-  height: 200px;
+  height: 210px;
 }
-
 .slider-img-container img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 40px 2% 40px 2%;
+    height: 58vh;
+    overflow: hidden;
+  }
 }

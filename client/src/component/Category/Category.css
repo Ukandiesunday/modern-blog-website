@@ -1,5 +1,5 @@
 .category-flex {
-  background-color: rgb(119, 16, 16);
+  background: linear-gradient(10deg, rgb(213, 116, 213), rgb(154, 14, 14));
   padding: 20px 3% 10px 3%;
   display: flex;
   align-items: center;
@@ -20,7 +20,9 @@
   padding: 0 2px 2px 2px;
   text-wrap: nowrap;
   cursor: pointer;
-  border-left: 1px solid rgb(160, 105, 105);
+  font-size: 18px;
+  font-weight: 500;
+  border-left: 1px solid rgb(209, 202, 202);
 }
 .p {
   border-left: none;

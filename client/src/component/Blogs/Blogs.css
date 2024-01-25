@@ -22,4 +22,7 @@
   .blogs-right {
     flex-basis: 100%;
   }
+  .blogs {
+    padding: 0 4%;
+  }
 }
