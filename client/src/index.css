@@ -30,3 +30,43 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.search {
+  padding: 8rem 0 10rem 0;
+}
+@media (max-width: 768px) {
+  .search {
+    padding: 8rem 0 10rem 0;
+  }
+}
+.search input,
+.search button {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  caret-color: black;
+  color: black;
+}
+.search input::placeholder {
+  color: black;
+}
+.search input {
+  width: 70%;
+  border: 2px solid black;
+}
+.search button {
+  border: 0;
+  transition: all 0.5s ease;
+  background-color: rgb(174, 14, 14);
+  color: white;
+  border-radius: 0 4px 4px 0;
+}
+.search button:hover {
+  background-color: rgb(219, 168, 168);
+}
+.error {
+  font-size: 17px;
+  font-weight: 500;
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}

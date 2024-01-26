@@ -1,7 +1,6 @@
 import "./Category.css";
-
 const Category = ({ handleCategoryChange, selectedCategory }) => {
-  const categories = ["AI", "Health", "Security", "Startups", "Tech"];
+  const categories = ["ai", "health", "security", "startups", "tech"];
   return (
     <div className="category-flex">
       <div className=" cat-div">

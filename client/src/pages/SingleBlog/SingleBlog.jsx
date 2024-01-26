@@ -4,6 +4,7 @@ import RelatedBlogs from "../../component/RelatedBlogs/RelatedBlogs";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Loader from "../../component/Loader/Loader";
+import Banner from "../../component/Banner/Banner";
 const SingleBlog = () => {
   const { id } = useParams();
   const [blog, setBlog] = useState();
@@ -36,6 +37,7 @@ const SingleBlog = () => {
 
   return (
     <div>
+      <Banner />
       <div className="blog">
         <h2 className="h2">welcome to latest {category} news</h2>
         <div className="single-blog">

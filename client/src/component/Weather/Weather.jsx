@@ -6,6 +6,7 @@ import rainImg from "../../images/rain.jpeg";
 import clearImg from "../../images/clear.jpeg";
 import drizzleImg from "../../images/drizzle.jpeg";
 import mistImg from "../../images/mist.webp";
+import weatherImg from "../../images/weather.jpg";
 
 import "./Weather.css";
 
@@ -33,7 +34,7 @@ const Weather = () => {
         if (data.weather[0].main === "Clear") {
           imgPath = clearImg;
         } else if (data.weather[0].main === "Clouds") {
-          imgPath = cloudImg;
+          imgPath = weatherImg;
         } else if (data.weather[0].main === "Rain") {
           imgPath = rainImg;
         } else if (data.weather[0].main === "Drizzle") {

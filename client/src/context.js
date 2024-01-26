@@ -8,19 +8,17 @@ const AppProvider = ({ children }) => {
   const [category, setCategory] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [activeCategory, setActiveCategory] = useState("");
-  const [searchResult, setSearchResult] = useState();
+
   let pageSize = 8;
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
         setIsLoading(true);
         const url = `https://modern-blog-website-sever.vercel.app/blogs?page=${currentPage}&limit=${pageSize}&category=${category}`;
-
-        const data = await axios.get(url).then((res) => res.data);
-        if (data.length < 1) {
-          setSearchResult("Search result not found!");
-        }
+        const response = await axios.get(url);
+        const data = response.data;
         setBlogs(data);
+        console.log(response);
       } catch (error) {
         console.log(error);
       }
@@ -47,7 +45,6 @@ const AppProvider = ({ children }) => {
         handleCategoryChange,
         handlePageChange,
         activeCategory,
-        searchResult,
         blogs,
         isLoading,
       }}

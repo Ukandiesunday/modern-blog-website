@@ -23,6 +23,7 @@
   font-size: 18px;
   font-weight: 500;
   border-left: 1px solid rgb(209, 202, 202);
+  text-transform: capitalize;
 }
 .p {
   border-left: none;

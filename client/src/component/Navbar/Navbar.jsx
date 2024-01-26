@@ -4,6 +4,8 @@ import { IoMdCloseCircleOutline } from "react-icons/io";
 import { BiMenuAltRight } from "react-icons/bi";
 import { FaPlus } from "react-icons/fa6";
 import { FaMinus } from "react-icons/fa6";
+import { ImUser } from "react-icons/im";
+import { FaMagnifyingGlass } from "react-icons/fa6";
 
 import "./Navbar.css";
 import { useGlobalContext } from "../../context";
@@ -48,8 +50,16 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+          <div className="user">
+            <Link to="/login" className="user-i hover">
+              <ImUser />
+            </Link>
+            <Link to="search" className="user-i hover">
+              <FaMagnifyingGlass />
+            </Link>
+          </div>
           <div className="menu-icon">
-            <button className="btn" onClick={handleMenuToggle}>
+            <button className="btn btn-icon" onClick={handleMenuToggle}>
               {isOpen ? <IoMdCloseCircleOutline /> : <BiMenuAltRight />}
             </button>
           </div>

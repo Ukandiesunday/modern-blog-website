@@ -38,6 +38,7 @@ const BlogCards = ({
       <div className="card-container">
         {filteredBlogs?.map((blog) => (
           <div key={blog.id} className="card-wrapper">
+            {console.log(blog.category)}
             <Link to={`/blogs/${blog.id}`}>
               <div className="img-container">
                 <img src={blog?.image} alt="" />

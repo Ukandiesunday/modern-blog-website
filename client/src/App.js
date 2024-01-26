@@ -6,12 +6,15 @@ import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import SingleBlog from "./pages/SingleBlog/SingleBlog";
 import Banner from "./component/Banner/Banner";
+import Search from "./component/Search";
+import Login from "./component/Register/Login";
+import Register from "./component/Register/Register";
 
 const Layout = () => {
   return (
     <div className="app">
       <Navbar />
-      <Banner />
+      {/* <Banner /> */}
       <Outlet />
       <Footer />
     </div>
@@ -38,6 +41,18 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/search",
+        element: <Search />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
       },
     ],
   },

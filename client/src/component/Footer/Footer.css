@@ -1,5 +1,5 @@
-.footer {
-  background: linear-gradient(130deg, rgb(219, 159, 219), rgb(164, 79, 79));
+.footer-container {
+  background: linear-gradient(130deg, rgb(213, 116, 213), rgb(154, 14, 14));
   padding: 13px 4% 30px 4%;
   margin-top: 60px;
   font-weight: 500;
@@ -25,12 +25,16 @@
   border-radius: 5px;
   padding: 4px;
   color: beige;
-  border: 2px solid beige;
+  border: 2px solid rgb(198, 198, 190);
   background-color: transparent;
   white-space: nowrap;
 }
+.btn2 {
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
 .input::placeholder {
-  color: beige;
+  color: rgb(230, 230, 221);
 }
 .copy {
   text-align: center;
