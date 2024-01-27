@@ -1,0 +1,17 @@
+.correspondence {
+  padding-top: 35px;
+  padding-inline: 4%;
+}
+
+.slide-item {
+  display: flex;
+  padding-inline: 20px;
+}
+.slide {
+  display: flex;
+}
+.slide-item img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}

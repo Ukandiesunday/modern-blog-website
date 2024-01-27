@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Loader from "../../component/Loader/Loader";
 import Banner from "../../component/Banner/Banner";
+import Corress from "../../component/Correspondent/Corress";
 
 const SingleBlog = () => {
   const { id } = useParams();
@@ -60,7 +61,9 @@ const SingleBlog = () => {
         </div>
       </div>
       <RelatedBlogs relatedCategory={category} />
-      <div></div>
+      <div>
+        <Corress />
+      </div>
     </div>
   );
 };

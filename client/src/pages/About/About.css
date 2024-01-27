@@ -1,3 +1,28 @@
 .about {
-  margin: 200px 0;
+  margin: 70px auto;
+}
+.abt {
+  font-weight: 600;
+  text-align: center;
+  padding: 20px 10%;
+}
+.abt p {
+  font-size: 20px;
+}
+.about-correspondent {
+  padding: 0 5%;
+}
+.abt h4 {
+  margin-bottom: 10px;
+  font-size: 30px;
+  text-transform: capitalize;
+}
+.div1 {
+  margin: 20px 0;
+  padding: 20px 10%;
+}
+
+.div1 p {
+  /* padding: 10px 10%; */
+  line-height: 1.5;
 }

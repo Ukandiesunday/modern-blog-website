@@ -1,4 +1,6 @@
 import "./Contact.css";
+import { MdOutlineMail } from "react-icons/md";
+import { FaLocationDot } from "react-icons/fa6";
 import contactImg from "../../images/call.jpg";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
@@ -43,16 +45,15 @@ const Contact = () => {
             <img src={contactImg} alt="" />
           </div>
           <p>
-            <i className="ri-map-pin-fill"></i> No.15 Calabar Itu Road, Uyo
-            city.
+            <FaLocationDot />
+            No.15 Calabar Itu Road, Uyo city.
           </p>
           <p>
-            <i className="ri-mail-fill"></i> ublog@gmail.com
+            <MdOutlineMail />
+            ublog@gmail.com
           </p>
           <p>
-            <span style={{ color: "green" }}>
-              <i className="ri-cellphone-fill"></i> CALL FOR REDRESS?
-            </span>
+            <span style={{ color: "purple" }}>CALL FOR REDRESS?</span>
             :+2349154578495
           </p>
         </div>

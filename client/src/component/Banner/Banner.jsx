@@ -18,15 +18,14 @@ const Banner = () => {
   var settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 100,
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
     autoplay: true,
-    speed: 2000,
     disableOnInteraction: true,
     pauseOnMouseHover: false,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
     nextArrow: <Arrow />,
     prevArrow: <Arrow />,
     responsive: [
