@@ -35,7 +35,7 @@ const Navbar = () => {
         <div className="nav-flex">
           <Link to="/">
             <h1 className="logo">
-              news<span>Blog</span>
+              u<span>Blog</span>
             </h1>
           </Link>
           <ul className="ul">
@@ -59,7 +59,7 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="menu-icon">
-            <button className="btn btn-icon" onClick={handleMenuToggle}>
+            <button className=" btn-icon" onClick={handleMenuToggle}>
               {isOpen ? <IoMdCloseCircleOutline /> : <BiMenuAltRight />}
             </button>
           </div>
@@ -78,10 +78,10 @@ const Navbar = () => {
             ))}
 
             <div>
-              <p className="links li" onClick={handleCategoryToggle}>
+              <li className="links li" onClick={handleCategoryToggle}>
                 See Categories
                 <span> {isCategoryOpen ? <FaMinus /> : <FaPlus />}</span>
-              </p>
+              </li>
 
               <div className={isCategoryOpen ? "" : "open-cat"}>
                 <div className="li">

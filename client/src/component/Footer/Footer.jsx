@@ -1,5 +1,4 @@
 import "./Footer.css";
-import { FaBell } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -21,6 +20,8 @@ const Footer = () => {
               <p>Business</p>
               <p>Entertainment</p>
             </div>
+          </div>
+          <div className="row2">
             <div className="col col1">
               <h4>Category</h4>
               <p>Tech</p>
@@ -28,22 +29,20 @@ const Footer = () => {
               <p>Health</p>
               <p>Startups</p>
             </div>
-          </div>
-          <div className="row2">
             <div className="col">
               <h4>Business</h4>
               <p>Infoprenuer</p>
               <p>personal</p>
               <p>wiki</p>
             </div>
+          </div>
+          <div className="row3">
             <div className="col2">
               <h4>Subscribe for updates</h4>
 
               <div className="form-container">
                 <input className="input" type="text" placeholder="Email" />
-                <button className="btn2">
-                  subscribe <FaBell />
-                </button>
+                <button className="btn2">subscribe</button>
               </div>
             </div>
           </div>

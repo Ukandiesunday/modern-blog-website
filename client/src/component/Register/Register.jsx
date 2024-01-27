@@ -16,8 +16,8 @@ const Register = () => {
     phone: yup
       .string()
       .matches(/^[0-9]{11}$/, "Invalid phone number")
-      .required("Input your phone number")
       .required("Input your phone number"),
+
     password: yup.string().max(18).required(" Please input your password"),
     confirmPassword: yup
       .string()

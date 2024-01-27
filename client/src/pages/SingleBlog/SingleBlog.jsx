@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Loader from "../../component/Loader/Loader";
 import Banner from "../../component/Banner/Banner";
+
 const SingleBlog = () => {
   const { id } = useParams();
   const [blog, setBlog] = useState();
@@ -59,6 +60,7 @@ const SingleBlog = () => {
         </div>
       </div>
       <RelatedBlogs relatedCategory={category} />
+      <div></div>
     </div>
   );
 };
