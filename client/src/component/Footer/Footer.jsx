@@ -1,5 +1,5 @@
 import "./Footer.css";
-
+import { FaBell } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="footer">
@@ -42,7 +42,9 @@ const Footer = () => {
 
               <div className="form-container">
                 <input className="input" type="text" placeholder="Email" />
-                <button className="btn2">subscribe</button>
+                <button className="btn2">
+                  <FaBell />
+                </button>
               </div>
             </div>
           </div>
