@@ -80,7 +80,7 @@ const BlogCards = ({
             <button
               className="btns btns2"
               onClick={() => handlePageChange(currentPage + 1)}
-              disabled={currentPage === totalPage}
+              disabled={currentPage === filteredBlogs.length}
             >
               <IoIosArrowForward />
             </button>

@@ -1,17 +1,12 @@
 .about {
   margin: 70px 0 10px;
 }
-.abt {
-  background: url(https://img.freepik.com/premium-photo/skeptical-coworkers-watching-business-presentation-project-laptop-screen-during-meeting_236854-33091.jpg?w=740);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100px;
-  margin-top: 40px;
-  font-weight: 600;
+
+.abt-img-container {
+  background-color: black;
+  padding: 20px 0;
+  color: white;
   text-align: center;
-  height: fit-content;
-  padding: 20px 10%;
 }
 
 .abt p {

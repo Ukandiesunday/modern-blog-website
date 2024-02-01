@@ -1,5 +1,7 @@
 .footer-container {
   background: linear-gradient(130deg, rgb(213, 116, 213), rgb(154, 14, 14));
+  /* background-color: black;
+  color: white; */
   padding: 13px 4% 30px 4%;
   margin-top: 40px;
   font-weight: 500;
@@ -26,8 +28,8 @@
   font-size: 16px;
   border-radius: 5px;
   padding: 4px;
-  color: beige;
-  border: 2px solid rgb(198, 198, 190);
+  color: rgb(174, 174, 167);
+  border: 2px solid rgb(148, 148, 138);
   background-color: transparent;
   white-space: nowrap;
 }
@@ -36,14 +38,14 @@
   cursor: pointer;
 }
 .input::placeholder {
-  color: rgb(230, 230, 221);
+  color: rgb(148, 148, 138);
 }
 .copy {
   text-align: center;
 }
 hr {
   margin: 15px 0;
-  color: beige;
+  border: 1px solid rgb(148, 148, 138);
 }
 @media (max-width: 768px) {
   .row1,

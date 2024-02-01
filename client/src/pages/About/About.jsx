@@ -4,11 +4,15 @@ const About = () => {
   return (
     <div className="about">
       <div className="abt">
-        <h4>about us</h4>
-        <p>
-          Get details about our daily posts. We get you fed with the latest
-          updates.
-        </p>
+        <div className="abt-img-container">
+          <div className="about-desc">
+            <h4>about us</h4>
+            <p>
+              Get details about our daily posts. We get you fed with the latest
+              updates.
+            </p>
+          </div>
+        </div>
       </div>
       <div className="about-left">
         <div className="div1">
