@@ -7,7 +7,7 @@ const About = () => {
         <h4>about us</h4>
         <p>
           Get details about our daily posts. We get you fed with the latest
-          updates, Stay tuned{" "}
+          updates.
         </p>
       </div>
       <div className="about-left">
@@ -34,7 +34,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="about-correspondent">
+      <div className="align-correspondent">
         <Corress />
       </div>
     </div>

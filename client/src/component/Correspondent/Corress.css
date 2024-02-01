@@ -2,10 +2,13 @@
   padding-top: 35px;
   padding-inline: 4%;
 }
-
+.correspondence .h2 {
+  margin-left: 22px;
+}
 .slide-item {
   display: flex;
   padding-inline: 20px;
+  width: 100px;
 }
 .slide {
   display: flex;
@@ -14,4 +17,10 @@
   width: 70px;
   height: 70px;
   border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .correspondence .h2 {
+    margin-left: 0px;
+  }
 }

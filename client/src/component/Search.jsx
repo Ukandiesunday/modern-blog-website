@@ -4,24 +4,25 @@ import { useNavigate } from "react-router-dom";
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResult, setSearchResult] = useState();
-  const { handleCategoryChange } = useGlobalContext();
+  const { handleCategoryChange, blogs } = useGlobalContext();
   const navigate = useNavigate();
   const handleSearchTerm = (e) => {
     e.preventDefault();
+    let matchSearchTerm = searchTerm.toLowerCase();
 
     if (
-      searchTerm === "ai" ||
-      searchTerm === "tech" ||
-      searchTerm === "growth" ||
-      searchTerm === "apps" ||
-      searchTerm === "startups" ||
-      searchTerm === "health" ||
-      searchTerm === "security" ||
-      searchTerm === "enterprise" ||
-      searchTerm === "fintech" ||
-      searchTerm === "work"
+      matchSearchTerm == "ai" ||
+      matchSearchTerm == "tech" ||
+      matchSearchTerm === "growth" ||
+      matchSearchTerm === "apps" ||
+      matchSearchTerm === "startups" ||
+      matchSearchTerm === "health" ||
+      matchSearchTerm === "security" ||
+      matchSearchTerm === "enterprise" ||
+      matchSearchTerm === "fintech" ||
+      matchSearchTerm === "work"
     ) {
-      handleCategoryChange(searchTerm.toLowerCase());
+      handleCategoryChange(matchSearchTerm);
       navigate("/");
       setSearchTerm("");
       setSearchResult("");

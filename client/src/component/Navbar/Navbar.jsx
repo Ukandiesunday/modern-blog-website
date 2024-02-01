@@ -16,7 +16,7 @@ const Navbar = () => {
 
   const { category, handleCategoryChange } = useGlobalContext();
 
-  const categories = ["AI", "Health", "Security", "Startups", "Tech"];
+  const categories = ["ai", "health", "security", "startups", "tech"];
 
   const navItems = [
     { path: "/", link: "Home" },

@@ -18,7 +18,6 @@ const AppProvider = ({ children }) => {
         const response = await axios.get(url);
         const data = response.data;
         setBlogs(data);
-        console.log(response);
       } catch (error) {
         console.log(error);
       }
