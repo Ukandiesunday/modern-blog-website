@@ -49,6 +49,7 @@
   list-style: none;
   display: inline-block;
   margin-right: 20px;
+  text-transform: capitalize;
 }
 .btn-icon {
   cursor: pointer;
@@ -90,6 +91,9 @@
   }
   .li {
     display: block;
+  }
+  .li p {
+    text-transform: capitalize;
   }
   .mobile-menu .li {
     padding: 8px 20px;
