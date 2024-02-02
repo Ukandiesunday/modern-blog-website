@@ -8,7 +8,9 @@
   color: white;
   text-align: center;
 }
-
+.about-desc {
+  padding: 5px 4%;
+}
 .abt p {
   font-size: 20px;
 }

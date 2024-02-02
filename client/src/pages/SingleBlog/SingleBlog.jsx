@@ -52,9 +52,11 @@ const SingleBlog = () => {
               </div>
               <div className="blog-item-wrap">
                 <h4>{item.title}</h4>
+                <h4> Published date: {item.published_date}</h4>
                 <p>{item.content}</p>
+                <p>{item.content2}</p>
+                <p>{item.content3}</p>
                 <span>{item.category}</span>
-                <span>{item.published_date}</span>
               </div>
             </div>
           ))}

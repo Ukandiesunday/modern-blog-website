@@ -67,7 +67,10 @@ const BlogCards = ({
           <li>
             <button
               className="btns btns1"
-              onClick={() => handlePageChange(currentPage - 1)}
+              onClick={() => {
+                handlePageChange(currentPage - 1);
+                window.scrollTo({ top: "100" });
+              }}
               disabled={currentPage === 1}
             >
               <IoIosArrowBack />
@@ -79,8 +82,11 @@ const BlogCards = ({
           <li>
             <button
               className="btns btns2"
-              onClick={() => handlePageChange(currentPage + 1)}
-              disabled={currentPage === filteredBlogs.length}
+              onClick={() => {
+                handlePageChange(currentPage + 1);
+                window.scrollTo({ top: "100" });
+              }}
+              disabled={currentPage === totalPage}
             >
               <IoIosArrowForward />
             </button>

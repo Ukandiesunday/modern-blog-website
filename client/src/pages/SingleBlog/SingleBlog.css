@@ -11,6 +11,9 @@
   -webkit-background-clip: text;
   color: transparent;
 }
+.blog-item-wrap h4 {
+  margin-bottom: 6px;
+}
 .single-blog {
   display: flex;
 }

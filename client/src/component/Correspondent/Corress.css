@@ -7,6 +7,8 @@
 }
 .slide-item {
   display: flex;
+  align-items: center;
+  justify-content: center;
   padding-inline: 20px;
   width: 100px;
 }
@@ -22,5 +24,9 @@
 @media (max-width: 768px) {
   .correspondence .h2 {
     margin-left: 0px;
+  }
+  .slide-item {
+    padding: 0 100px;
+    margin: 10px auto;
   }
 }
