@@ -54,7 +54,7 @@ const Corress = () => {
       <div className="banner-wrapper">
         <div className="slider-container">
           <Slider {...settings} className="slider slide">
-            <div className="slider-img-container slide-item">
+            <div className="slide-img-container slide-item">
               <img
                 src="https://randomuser.me/api/portraits/men/86.jpg"
                 alt=""

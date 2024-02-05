@@ -1,10 +1,9 @@
 .related-blog {
-  background-color: rgb(246, 237, 246);
-  margin: 100px 0 70px;
+  margin: 100px 0 40px;
   padding: 40px 3%;
 }
 @media (max-width: 768px) {
   .related-blog {
-    padding: 40px 4%;
+    padding: 20px 4%;
   }
 }

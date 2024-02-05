@@ -15,6 +15,7 @@
 .sign-in {
   color: blue;
   text-decoration: underline;
+  margin-top: 7px;
 }
 .item {
   display: flex;

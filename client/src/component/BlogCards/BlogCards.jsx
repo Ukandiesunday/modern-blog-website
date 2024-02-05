@@ -38,8 +38,10 @@ const BlogCards = ({
       <div className="card-container">
         {filteredBlogs?.map((blog) => (
           <div key={blog.id} className="card-wrapper">
-            {console.log(blog.category)}
-            <Link to={`/blogs/${blog.id}`}>
+            <Link
+              to={`/blogs/${blog.id}`}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
               <div className="img-container">
                 <img src={blog?.image} alt="" />
               </div>
@@ -69,7 +71,7 @@ const BlogCards = ({
               className="btns btns1"
               onClick={() => {
                 handlePageChange(currentPage - 1);
-                window.scrollTo({ top: "100" });
+                window.scrollTo({ top: 100 });
               }}
               disabled={currentPage === 1}
             >
@@ -84,7 +86,7 @@ const BlogCards = ({
               className="btns btns2"
               onClick={() => {
                 handlePageChange(currentPage + 1);
-                window.scrollTo({ top: "100" });
+                window.scrollTo({ top: 100 });
               }}
               disabled={currentPage === totalPage}
             >
