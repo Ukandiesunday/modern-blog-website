@@ -24,6 +24,9 @@ const Blogs = () => {
       </div>
     );
   }
+  if (blogs.length < 0) {
+    return <div className="no-blogs">no blogs found</div>;
+  }
   return (
     <div className="blogs-container">
       <div className="category">

@@ -35,30 +35,37 @@ const BlogCards = ({
   return (
     <div className="blog-cards">
       <h2 className="h2">stay updated with our latest world news</h2>
-      <div className="card-container">
-        {filteredBlogs?.map((blog) => (
-          <div key={blog.id} className="card-wrapper">
-            <Link
-              to={`/blogs/${blog.id}`}
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            >
-              <div className="img-container">
-                <img src={blog?.image} alt="" />
-              </div>
-              <div className="items-wrapper">
-                <h4>{blog?.title}</h4>
-                <p>{blog?.content}</p>
-
-                <div>
-                  <FaUserAstronaut />
-                  Author: {blog?.author}
+      {filteredBlogs.length > 0 ? (
+        <div className="card-container">
+          {filteredBlogs?.map((blog) => (
+            <div key={blog.id} className="card-wrapper">
+              <Link
+                to={`/blogs/${blog.id}`}
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              >
+                <div className="img-container">
+                  <img src={blog?.image} alt="" />
                 </div>
-                <div>Published date: {blog?.published_date}</div>
-              </div>
-            </Link>
-          </div>
-        ))}
-      </div>
+                <div className="items-wrapper">
+                  <h4>{blog?.title}</h4>
+                  <p>{blog?.content}</p>
+
+                  <div>
+                    <FaUserAstronaut />
+                    Author: {blog?.author}
+                  </div>
+                  <div>Published date: {blog?.published_date}</div>
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="no-blogs">
+          <h2>No blogs found.</h2>
+          Category probably has limited blogs.
+        </div>
+      )}
 
       {/* display pagination */}
       <div className="pagination">

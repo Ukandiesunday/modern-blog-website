@@ -33,6 +33,12 @@ img {
   color: rgb(222, 75, 75);
   text-decoration: underline;
 }
+.no-blogs {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: 600;
+}
 /* style rules for pagination */
 .pagination {
   margin: 60px auto;
