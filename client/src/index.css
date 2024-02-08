@@ -16,13 +16,12 @@ a {
   text-decoration: none;
   color: black;
 }
-
 .loader {
   position: relative;
   height: 100vh;
 }
 .loader img {
-  width: 55px;
+  width: 40px;
 }
 .img-loader-container {
   position: absolute;

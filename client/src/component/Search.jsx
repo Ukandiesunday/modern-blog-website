@@ -11,8 +11,8 @@ const Search = () => {
     let matchSearchTerm = searchTerm.toLowerCase();
 
     if (
-      matchSearchTerm == "ai" ||
-      matchSearchTerm == "tech" ||
+      matchSearchTerm === "ai" ||
+      matchSearchTerm === "tech" ||
       matchSearchTerm === "growth" ||
       matchSearchTerm === "apps" ||
       matchSearchTerm === "startups" ||
