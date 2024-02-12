@@ -64,8 +64,11 @@ const Navbar = () => {
             </button>
           </div>
         </div>
+
+        {/* mobile navbar */}
+
         <div className="mobile">
-          <ul className={`ul2 ${isOpen ? "mobile-menu" : ""}`}>
+          <ul className={`ul2  ${isOpen ? "mobile-menu" : ""}`}>
             {navItems.map((Item) => (
               <li key={Item.path} className="li" onClick={handleMenuToggle}>
                 <NavLink

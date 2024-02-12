@@ -1,7 +1,5 @@
 .footer-container {
   background: linear-gradient(130deg, rgb(213, 116, 213), rgb(154, 14, 14));
-  /* background-color: black;
-  color: white; */
   padding: 13px 4% 30px 4%;
   margin-top: 30px;
   font-weight: 500;
@@ -9,8 +7,10 @@
 
 .footer-flex {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 70px;
 }
 .footer-flex p,
 .form-container {
@@ -20,7 +20,7 @@
 .row2,
 .row3 {
   display: flex;
-  gap: 50px;
+  gap: 70px;
 }
 
 .btn2,
@@ -48,11 +48,18 @@ hr {
   border: 1px solid rgb(148, 148, 138);
 }
 @media (max-width: 768px) {
-  .row1,
-  .row2,
-  .row3,
   .footer-flex {
+    flex-direction: column;
     gap: 30px;
-    margin: 0 auto;
+  }
+  .row1,
+  .row3 {
+    gap: 46px;
+  }
+  .row2 {
+    margin-left: -19px;
+  }
+  .col2 {
+    margin-left: -14px;
   }
 }
