@@ -16,6 +16,7 @@ const BlogCards = ({
     .slice((currentPage - 1) * pageSize, currentPage * pageSize);
 
   // Pagination
+
   const totalPage = Math.ceil(blogs.length / pageSize);
   const renderPagination = () => {
     const pageNumbers = Array.from({ length: totalPage }, (_, i) => i + 1);
@@ -23,7 +24,7 @@ const BlogCards = ({
       <li key={pageNumber}>
         <a
           className={currentPage === pageNumber ? "active-page" : ""}
-          href="#"
+          href="/#"
           onClick={() => handlePageChange(pageNumber)}
         >
           {pageNumber}
@@ -34,73 +35,80 @@ const BlogCards = ({
 
   return (
     <div className="blog-cards">
-      <h2 className="h2">stay updated with our latest world news</h2>
-      {filteredBlogs.length > 0 ? (
-        <div className="card-container">
-          {filteredBlogs?.map((blog) => (
-            <div key={blog.id} className="card-wrapper">
-              <Link
-                to={`/blogs/${blog.id}`}
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              >
-                <div className="img-container">
-                  <img src={blog?.image} alt="" />
-                </div>
-                <div className="items-wrapper">
-                  <h4>{blog?.title}</h4>
-                  <p>{blog?.content}</p>
-
-                  <div>
-                    <FaUserAstronaut />
-                    Author: {blog?.author}
+      <div className="blog-cards-wrapper">
+        <h2 className="h2">stay updated with our latest world news</h2>
+        {filteredBlogs.length > 0 ? (
+          <div className="card-container">
+            {filteredBlogs?.map((blog) => (
+              <div key={blog.id} className="card-wrapper">
+                <Link
+                  to={`/blogs/${blog.id}`}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
+                >
+                  <div className="img-container">
+                    <img src={blog?.image} alt="" />
                   </div>
-                  <div>Published date: {blog?.published_date}</div>
-                </div>
-              </Link>
-            </div>
-          ))}
-        </div>
-      ) : (
-        <div className="no-blogs">
-          <h2>No blogs found.</h2>
-          Category probably has limited blogs.
-        </div>
-      )}
+                  <div className="items-wrapper">
+                    <h4>{blog?.title}</h4>
+                    <p>{blog?.content}</p>
 
-      {/* display pagination */}
-      <div className="pagination">
-        <p>
-          page {currentPage} of {totalPage} pages
-        </p>
-        <ul className="pagination-container">
-          <li>
-            <button
-              className="btns btns1"
-              onClick={() => {
-                handlePageChange(currentPage - 1);
-                window.scrollTo({ top: 100 });
-              }}
-              disabled={currentPage === 1}
-            >
-              <IoIosArrowBack />
-            </button>
-          </li>
-          <div className="pageNumber-container">
-            <div className="pageNumber-wrapper">{renderPagination()}</div>
+                    <div>
+                      <FaUserAstronaut /> {""}
+                      Author: {blog?.author}
+                    </div>
+                    <div className="date-container">
+                      Published date: {blog?.published_date}
+                      <span className="learn-more">Learn More</span>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            ))}
           </div>
-          <li>
-            <button
-              className="btns btns2"
-              onClick={() => {
-                handlePageChange(currentPage + 1);
-                window.scrollTo({ top: 100 });
-              }}
-              disabled={currentPage === totalPage}
-            >
-              <IoIosArrowForward />
-            </button>
-          </li>
-        </ul>
+        ) : (
+          <div className="no-blogs">
+            <h2>No blogs found.</h2>
+            Category probably has limited blogs.
+          </div>
+        )}
+
+        {/* display pagination */}
+        <div className="pagination">
+          <p>
+            page {currentPage} of {totalPage} pages
+          </p>
+          <ul className="pagination-container">
+            <li>
+              <button
+                className="btns btns1"
+                onClick={() => {
+                  handlePageChange(currentPage - 1);
+                  window.scrollTo({ top: 100 });
+                }}
+                disabled={currentPage === 1}
+              >
+                <IoIosArrowBack />
+              </button>
+            </li>
+            <div className="pageNumber-container">
+              <div className="pageNumber-wrapper">{renderPagination()}</div>
+            </div>
+            <li>
+              <button
+                className="btns btns2"
+                onClick={() => {
+                  handlePageChange(currentPage + 1);
+                  window.scrollTo({ top: 100 });
+                }}
+                disabled={currentPage === totalPage}
+              >
+                <IoIosArrowForward />
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );

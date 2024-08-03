@@ -12,6 +12,7 @@ import { useGlobalContext } from "../../context";
 const Navbar = () => {
   const [isCategoryOpen, setIsCategoryOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
   const navigate = useNavigate();
 
   const { category, handleCategoryChange } = useGlobalContext();
@@ -29,6 +30,7 @@ const Navbar = () => {
   const handleCategoryToggle = () => {
     setIsCategoryOpen(!isCategoryOpen);
   };
+
   return (
     <div className="navbar">
       <div className="navbar-container">

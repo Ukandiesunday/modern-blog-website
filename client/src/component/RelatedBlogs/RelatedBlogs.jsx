@@ -10,28 +10,30 @@ const RelatedBlogs = ({ relatedCategory }) => {
   );
   return (
     <div className="related-blog">
-      <h2 className="h2">read related posts</h2>
-      <div className="card-container">
-        {filterRelatedBlogs?.slice(2, 5).map((blog) => (
-          <div key={blog.id} className="card-wrapper">
-            <Link
-              to={`/blogs/${blog.id}`}
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            >
-              <div className="img-container">
-                <img src={blog?.image} alt="" />
-              </div>
-              <div className="items-wrapper">
-                <h4>{blog?.title}</h4>
-                <div>
-                  <FaUserAstronaut />
-                  Author: {blog?.author}
+      <div className="related-blog-wrapper">
+        <h2 className="h2">read related posts</h2>
+        <div className="card-container">
+          {filterRelatedBlogs?.slice(2, 5).map((blog) => (
+            <div key={blog.id} className="card-wrapper">
+              <Link
+                to={`/blogs/${blog.id}`}
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              >
+                <div className="img-container">
+                  <img src={blog?.image} alt="" />
                 </div>
-                <div> Public date: {blog?.published_date}</div>
-              </div>
-            </Link>
-          </div>
-        ))}
+                <div className="items-wrapper">
+                  <h4>{blog?.title}</h4>
+                  <div>
+                    <FaUserAstronaut />
+                    Author: {blog?.author}
+                  </div>
+                  <div> Public date: {blog?.published_date}</div>
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

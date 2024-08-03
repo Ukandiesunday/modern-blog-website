@@ -1,15 +1,21 @@
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  grid-auto-rows: auto;
 }
+
 .card-wrapper {
-  box-shadow: 0 0 1px rgb(8, 8, 8);
+  border: 1px solid rgb(224, 219, 219);
   border-radius: 5px;
 }
 .img-container {
   width: 100%;
   overflow: hidden;
+}
+.h2 {
+  text-align: center;
+  font-size: 33px;
 }
 img {
   width: 100%;
@@ -19,8 +25,16 @@ img {
 .items-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 9px;
-  padding: 6px;
+  gap: 10px;
+  padding: 20px;
+  line-height: 27px;
+}
+.date-container {
+  display: flex;
+  justify-content: space-between;
+}
+.learn-more {
+  color: blue;
 }
 .items-wrapper div {
   font-size: 15px;
@@ -42,6 +56,7 @@ img {
 /* style rules for pagination */
 .pagination {
   margin: 60px auto;
+  width: 100%;
 }
 .pagination p {
   margin: 10px 0;
@@ -68,18 +83,6 @@ img {
   color: white;
   padding: 3px 7px;
 }
-
-@media (max-width: 768px) {
-  .pageNumber-wrapper {
-    display: none;
-  }
-  .items-wrapper {
-    padding-right: 0;
-  }
-  .img-container {
-    width: 100%;
-  }
-}
 .btns {
   display: flex;
   align-items: center;
@@ -99,4 +102,13 @@ img {
 .btns.btns2 {
   border: 1px solid green;
   color: green;
+}
+@media (max-width: 768px) {
+  .pageNumber-wrapper {
+    display: none;
+  }
+
+  .img-container {
+    width: 100%;
+  }
 }

@@ -40,31 +40,33 @@ const SingleBlog = () => {
   return (
     <div>
       <Banner />
-      <div className="blog">
-        <h2 className="h2">welcome to latest {category} news</h2>
-        <div className="single-blog">
-          {blog?.map((item, index) => (
-            <div key={index} className="blog-item">
-              <div className="img-wrapper">
-                <div className="image-container">
-                  <img src={item.image} alt={item.title} />
+      <div className="single-blog-wrapper">
+        <div className="blog">
+          <h2 className="h2">welcome to latest {category} news</h2>
+          <div className="single-blog">
+            {blog?.map((item, index) => (
+              <div key={index} className="blog-item">
+                <div className="img-wrapper">
+                  <div className="image-container">
+                    <img src={item.image} alt={item.title} />
+                  </div>
+                </div>
+                <div className="blog-item-wrap">
+                  <h4>{item.title}</h4>
+                  <h4> Published date: {item.published_date}</h4>
+                  <p>{item.content}</p>
+                  <p>{item.content2}</p>
+                  <p>{item.content3}</p>
+                  <span>{item.category}</span>
                 </div>
               </div>
-              <div className="blog-item-wrap">
-                <h4>{item.title}</h4>
-                <h4> Published date: {item.published_date}</h4>
-                <p>{item.content}</p>
-                <p>{item.content2}</p>
-                <p>{item.content3}</p>
-                <span>{item.category}</span>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-      <RelatedBlogs relatedCategory={category} />
-      <div>
-        <Corress />
+        <RelatedBlogs relatedCategory={category} />
+        <div>
+          <Corress />
+        </div>
       </div>
     </div>
   );

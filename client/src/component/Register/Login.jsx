@@ -28,10 +28,10 @@ const Login = () => {
     <div className="form-wrapper">
       <div className="form-container">
         <form className="form" action="" onSubmit={handleSubmit(onSubmit)}>
-          <h3 style={{ color: "rgb(174, 14, 14)" }}>
+          <h1 style={{ color: "rgb(174, 14, 14)" }}>
             Enter Your Registered Information!
-          </h3>
-          <h4>Please fill out to sign in</h4>
+          </h1>
+          <h2>Please fill out to sign in</h2>
           <div className="item">
             <label htmlFor="email">Email</label>
             <input type="text" placeholder="Email" {...register("email")} />
@@ -49,10 +49,12 @@ const Login = () => {
           </div>
 
           <button type="submit">Login</button>
-          <p>Need an Account?</p>
-          <Link to="/register">
-            <span className="sign-in">Sign up</span>
-          </Link>
+          <div className="register-link">
+            <p>Need an Account?</p>
+            <Link to="/register" className=" link">
+              Sign up
+            </Link>
+          </div>
         </form>
       </div>
     </div>

@@ -1,8 +1,12 @@
+.blog-space {
+  padding-inline: 5%;
+}
 .blogs {
-  margin: 30px 0;
-  padding: 0 3%;
+  margin: 30px auto;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1440px;
 }
 .loading {
   text-align: center;
@@ -15,14 +19,28 @@
 .blogs-right {
   flex-basis: 28%;
 }
+@media screen and (max-width: 1024px) {
+  .blogs {
+    flex-wrap: wrap;
+  }
+  .blogs-left,
+  .blogs-right {
+    flex-basis: 100%;
+  }
+}
+
 @media (max-width: 768px) {
+  .blogs {
+    flex-wrap: wrap;
+  }
   .blogs-left {
     flex-basis: 100%;
   }
   .blogs-right {
     flex-basis: 100%;
+    width: 100%;
   }
-  .blogs {
-    padding: 0 4%;
+  .blog-space {
+    padding-inline: 15px;
   }
 }

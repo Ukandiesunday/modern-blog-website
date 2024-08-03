@@ -1,6 +1,5 @@
-// import { useEffect, useState } from "react";
 import "./Blogs.css";
-// import axios from "axios";
+
 import BlogCards from "../BlogCards/BlogCards";
 import Category from "../Category/Category";
 import Sidebar from "../Sidebar/Sidebar";
@@ -25,30 +24,38 @@ const Blogs = () => {
     );
   }
   if (blogs.length < 0) {
-    return <div className="no-blogs">no blogs found</div>;
+    return (
+      <div className="no-blogs " style={{ textAlign: "center" }}>
+        no blogs found
+      </div>
+    );
   }
   return (
     <div className="blogs-container">
-      <div className="category">
-        <Category
-          selectedCategory={category}
-          handleCategoryChange={handleCategoryChange}
-          blogs={blogs}
-          activeCategory={activeCategory}
-        />
-      </div>
-      <div className="blogs">
-        <div className="blogs-left">
-          <BlogCards
+      <div className="blogs-wrapper">
+        <div className="category">
+          <Category
+            selectedCategory={category}
+            handleCategoryChange={handleCategoryChange}
             blogs={blogs}
-            category={category}
-            pageSize={pageSize}
-            currentPage={currentPage}
-            handlePageChange={handlePageChange}
+            activeCategory={activeCategory}
           />
         </div>
-        <div className="blogs-right">
-          <Sidebar blogs={blogs} />
+        <div className="blog-space">
+          <div className="blogs">
+            <div className="blogs-left">
+              <BlogCards
+                blogs={blogs}
+                category={category}
+                pageSize={pageSize}
+                currentPage={currentPage}
+                handlePageChange={handlePageChange}
+              />
+            </div>
+            <div className="blogs-right">
+              <Sidebar blogs={blogs} />
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -48,6 +48,9 @@ hr {
   border: 1px solid rgb(148, 148, 138);
 }
 @media (max-width: 768px) {
+  .footer-container {
+    padding: 13px 15px 30px 15px;
+  }
   .footer-flex {
     flex-direction: column;
     gap: 30px;

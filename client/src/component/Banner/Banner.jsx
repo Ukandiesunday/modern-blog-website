@@ -1,7 +1,10 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import aiboy from "../../images/Aiboy.jpeg";
+import laptechtool from "../../images/laptechtool.webp";
+import robot from "../../images/Robot.jpg";
+import laptop from "../../images/laptop.avif";
 import "./Banner.css";
 function Arrow(props) {
   const { className, style, onClick } = props;
@@ -56,41 +59,28 @@ const Banner = () => {
   const dateFormatted = today.toLocaleDateString("en-US", options);
   return (
     <div className="banner">
-      <h3>{dateFormatted}</h3>
-      <div className="banner-wrapper">
-        <div className="slider-container">
-          <Slider {...settings} className="slider">
-            <div className="slider-img-container">
-              <img
-                src="https://t4.ftcdn.net/jpg/02/10/96/95/360_F_210969565_cIHkcrIzRpWNZzq8eaQnYotG4pkHh0P9.jpg"
-                alt=""
-              />
-            </div>
-            <div className="slider-img-container">
-              <img
-                src="https://t4.ftcdn.net/jpg/02/78/89/01/360_F_278890190_2485fPOWATgeRr0DPB7I7OYEz9D0oqMg.webp"
-                alt=""
-              />
-            </div>
-            <div className="slider-img-container">
-              <img
-                src="https://img.freepik.com/free-photo/modern-stationary-collection-arrangement_23-2149309648.jpg"
-                alt=""
-              />
-            </div>
-            <div className="slider-img-container">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOI979V36ULd7uHUlisFso9gGeaX5FAXvXYDr3og2cSq7YLuYwtE9U4nJQHTYM1wPusRw&usqp=CAU"
-                alt=""
-              />
-            </div>
-            <div className="slider-img-container">
-              <img
-                src="https://img.freepik.com/free-vector/startup-development_1284-22687.jpg"
-                alt=""
-              />
-            </div>
-          </Slider>
+      <div className="banner-container">
+        <h3>{dateFormatted}</h3>
+        <div className="banner-wrapper">
+          <div className="slider-container">
+            <Slider {...settings} className="slider">
+              <div className="slider-img-container">
+                <img src={laptechtool} alt="" />
+              </div>
+              <div className="slider-img-container">
+                <img src={aiboy} alt="ai boy" />
+              </div>
+              <div className="slider-img-container">
+                <img src={laptechtool} alt="" />
+              </div>
+              <div className="slider-img-container">
+                <img src={laptop} alt="" />
+              </div>
+              <div className="slider-img-container">
+                <img src={robot} alt="" />
+              </div>
+            </Slider>
+          </div>
         </div>
       </div>
     </div>

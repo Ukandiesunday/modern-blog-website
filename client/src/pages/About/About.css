@@ -1,7 +1,8 @@
 .about {
   margin: 70px 0 10px;
 }
-
+.about-wrapper {
+}
 .abt-img-container {
   background-color: black;
   padding: 20px 0;
@@ -22,11 +23,24 @@
   font-size: 30px;
   text-transform: capitalize;
 }
+.about-bottom {
+  padding-inline: 5%;
+}
 .div1 {
   margin: 5px 0;
-  padding: 20px 10%;
+
+  max-width: 1440px;
+  margin: 60px auto;
 }
 
 .div1 p {
-  line-height: 1.5;
+  line-height: 29px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .about-bottom {
+    padding-inline: 15px;
+  }
 }

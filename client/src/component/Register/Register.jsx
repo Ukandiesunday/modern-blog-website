@@ -41,7 +41,7 @@ const Register = () => {
       <div className="form-container">
         <form className="form" action="" onSubmit={handleSubmit(onSubmit)}>
           <h1 style={{ color: "rgb(174, 14, 14)" }}>Register</h1>
-          <h4>Fill out these fields</h4>
+          <h2>Fill out these fields</h2>
           <div className="item">
             <label htmlFor="surname">Surname</label>
             <input type="text" placeholder="Surname" {...register("surname")} />
@@ -85,10 +85,12 @@ const Register = () => {
             <span>{errors.confirmPassword?.message}</span>
           </div>
           <button type="submit">Sign up</button>
-          <p>Already registered?</p>
-          <Link to="/login">
-            <span className="sign-in">Sign in</span>
-          </Link>
+          <div className="register-link">
+            <p>Already registered?</p>
+            <Link to="/login" className="link link-register">
+              Sign in
+            </Link>
+          </div>
         </form>
       </div>
     </div>

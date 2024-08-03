@@ -1,6 +1,11 @@
 .correspondence {
+  line-height: 27px;
   padding-top: 30px;
-  padding-inline: 4%;
+  padding-inline: 5%;
+}
+.correspo-wrapper {
+  max-width: 1440px;
+  margin-inline: auto;
 }
 .correspondence .h2 {
   margin-left: 22px;
@@ -22,6 +27,9 @@
 }
 
 @media (max-width: 768px) {
+  .correspondence {
+    padding-inline: 15px;
+  }
   .correspondence .h2 {
     margin-left: 0px;
   }

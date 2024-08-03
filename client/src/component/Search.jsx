@@ -8,6 +8,7 @@ const Search = () => {
   const navigate = useNavigate();
   const handleSearchTerm = (e) => {
     e.preventDefault();
+
     let matchSearchTerm = searchTerm.toLowerCase();
 
     if (

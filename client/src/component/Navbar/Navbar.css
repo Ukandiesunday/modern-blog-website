@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   z-index: 999;
-
+  padding-inline: 5%;
   box-shadow: 0 1px 0 rgb(161, 152, 152);
 }
 
@@ -19,6 +19,7 @@
   gap: 30px;
   font-size: 25px;
   width: 100px;
+  justify-content: space-between;
   margin-top: 10px;
 }
 
@@ -26,10 +27,13 @@
   color: rgb(174, 14, 14);
 }
 .nav-flex {
-  padding: 10px 8%;
+  padding: 10px 0px;
+  max-width: 1440px;
+  margin-inline: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .links {
@@ -49,7 +53,7 @@
 .ul li {
   list-style: none;
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 30px;
   text-transform: capitalize;
 }
 .btn-icon {
@@ -61,47 +65,60 @@
   background-color: transparent;
 }
 
-.menu-icon,
-.ul2 {
+.menu-icon {
   display: none;
 }
+.ul2 {
+  transition: clip-path 500ms;
+  visibility: hidden;
+  opacity: 0;
+  padding: 30px 5px;
+  transition: 1s ease;
+  min-height: 57vh;
+  position: absolute;
+  background: linear-gradient(130deg, rgb(213, 116, 213), rgb(154, 14, 14));
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  border-radius: 0 0 40px 40px;
+  clip-path: circle(0% at top right);
+}
 
+.ul2 li {
+  transition: visibility 500ms opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
 @media (max-width: 768px) {
   .ul {
     display: none;
   }
-  .mobile {
-    position: relative;
-  }
-  .ul2 {
-    padding-top: 15px;
-    transition: all 1s ease;
-    height: 50vh;
-    position: absolute;
-    background-color: white;
-    width: 100%;
-    top: -3px;
-    z-index: 5;
-    border-radius: 0 0 40px 40px;
-  }
+
   .ul2.mobile-menu {
+    clip-path: circle(100%);
     height: fit-content;
-    display: block;
+    visibility: visible;
+    opacity: 1;
   }
 
   .menu-icon {
     display: block;
+    position: relative;
+    z-index: 10;
   }
-  /* .li {
-    display: block;
-  } */
+
   .li p {
     text-transform: capitalize;
   }
-  .mobile-menu .li {
+  .ul2.mobile-menu .li {
     padding: 15px 8%;
     font-weight: 600;
-    transition: all 1s ease;
+    visibility: visible;
+    opacity: 1;
   }
   .active {
     color: rgb(174, 14, 14);
@@ -123,5 +140,8 @@
   }
   .menu-icon {
     font-size: 30px;
+  }
+  .navbar-container {
+    padding-inline: 15px;
   }
 }
