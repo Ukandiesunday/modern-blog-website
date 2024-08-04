@@ -59,7 +59,7 @@ const BlogCards = ({
                       Author: {blog?.author}
                     </div>
                     <div className="date-container">
-                      Published date: {blog?.published_date}
+                      Published: {blog?.published_date}
                       <span className="learn-more">Learn More</span>
                     </div>
                   </div>

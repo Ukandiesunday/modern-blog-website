@@ -32,6 +32,8 @@ img {
 .date-container {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
+  text-wrap: nowrap;
 }
 .learn-more {
   color: blue;
