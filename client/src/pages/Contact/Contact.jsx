@@ -116,7 +116,10 @@ const Contact = () => {
           </div>
         </div>
         <div className="location-map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15895.7678977!2d7.947858999999999!3d5.113055!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x105d513f9366ee87%3A0x9d73a43a9eaaf136!2sUyo%20Itam%20Junction%2C%20Itu!5e0!3m2!1sen!2sng!4v1706722590552!5m2!1sen!2sng"></iframe>
+          <iframe
+            title="map"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15895.7678977!2d7.947858999999999!3d5.113055!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x105d513f9366ee87%3A0x9d73a43a9eaaf136!2sUyo%20Itam%20Junction%2C%20Itu!5e0!3m2!1sen!2sng!4v1706722590552!5m2!1sen!2sng"
+          ></iframe>
         </div>
       </div>
     </div>

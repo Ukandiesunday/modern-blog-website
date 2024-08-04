@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResult, setSearchResult] = useState();
-  const { handleCategoryChange, blogs } = useGlobalContext();
+  const { handleCategoryChange } = useGlobalContext();
   const navigate = useNavigate();
   const handleSearchTerm = (e) => {
     e.preventDefault();

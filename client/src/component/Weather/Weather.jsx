@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import Loader from "../Loader/Loader";
+import { useState } from "react";
+
 import axios from "axios";
 import { FaSearch } from "react-icons/fa";
 import cloudImg from "../../images/cloudy.jpg";
